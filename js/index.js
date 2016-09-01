@@ -1,6 +1,12 @@
 
 var n = Number(prompt('Задайте зачення для знаходження числа Фібоначчі:'));
 document.write('Для n = ', n);
+if (isNaN(n)) {
+  document.write(' Введене значення не є числом ');
+} else {
+  document.write(' число Фібоначчі F = ', fib());
+}
+
 
 function fib() {
   var a = 1, b = 1; //
@@ -10,10 +16,5 @@ function fib() {
         b = c;     
   }
   return b; 
-}
-if (isNaN(n)) {
-  document.write(' Введене значення не є числом ');
-} else {
-  document.write(' число Фібоначчі F = ', fib());
 }
 
